@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;        
+    justify-content: center;
+    margin: 5rem;
+    margin-top: 1% !important;
+}
+
+app-item-detail {
+    flex: 1;
+    max-width: 781px;
+    max-height: 319px;
+    margin: 50px;
+}

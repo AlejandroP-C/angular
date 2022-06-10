@@ -1,0 +1,35 @@
+<mat-card>
+
+    <div>
+        <img class="flag" src="{{racetrack?.flag}}">
+        <mat-card-header>
+            <mat-card-title>{{racetrack?.raceTrackID}} - {{racetrack?.GPName}}</mat-card-title>
+            <mat-card-subtitle>{{racetrack?.name}}<br>{{racetrack?.country}}</mat-card-subtitle>
+        </mat-card-header>
+    </div>
+
+    <mat-card-content>
+
+        <div class="c-statistics">
+
+            <div class="c-statistics__content">
+
+                <h3 class="c-statistics__title">Circuit Record:</h3>
+
+                <div class="c-statistics__time">{{racetrack?.fastestLap}}</div>
+
+                <div class="c-statistics__rider">
+
+                    <div class="c-statistics__rider-name">{{racetrack?.racerFL}}</div>
+                    <div class="c-statistics__rider-scuderia">{{racetrack?.teamFL}}</div>
+                    <div class="c-statistics__record-year">{{racetrack?.yearFL}}</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </mat-card-content>
+
+</mat-card>

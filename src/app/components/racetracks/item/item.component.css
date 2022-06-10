@@ -1,0 +1,30 @@
+.flag {
+    display: block;
+    float: inline-start;
+    width: 44px;
+    height: auto;
+    border: 1px solid black;
+}
+
+mat-card-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+mat-card-content,
+mat-card-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+mat-card-subtitle {
+    text-transform: uppercase;
+    color: grey;
+    font-weight: 400;
+}
+
+mat-card-actions > button {
+    text-transform: uppercase;
+}

@@ -1,0 +1,111 @@
+<div class="container">
+
+    <div class="center-content">
+
+        <div class="form-element">
+
+            <mat-card *ngIf="userlogin">
+
+                <mat-card-content>
+            
+                    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            
+                        <mat-form-field>
+            
+                            <input matInput placeholder="Email" [(ngModel)]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email"  #userName required>
+            
+                            <mat-error>
+                                Ingrese un e-mail válido (abc@lmn.yz)
+                            </mat-error>
+            
+                        </mat-form-field>
+            
+                        <mat-form-field>
+            
+                            <input matInput placeholder="Contraseña" [(ngModel)]="password" [type]="hide ? 'password' : 'text'" name="password" #userPassword required>
+            
+                            <mat-error>
+                                Campo obligatorio
+                            </mat-error>
+            
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+            
+                        </mat-form-field>
+                    
+                        <div class="container-login-form-btn">
+            
+                            <div class="wrap-login-form-btn">
+            
+                                <div class="login-form-bgbtn"></div>
+            
+                                <button mat-raised-button [disabled]="!loginForm.form.valid" class="login-form-btn">Login</button>
+            
+                            </div>
+            
+                        </div>
+            
+                    </form>
+            
+                    <div class="register">¿No tienes una cuenta? <a (click)="user_register()">Registrarse</a></div>
+            
+                </mat-card-content>
+            
+            </mat-card>
+            
+            <mat-card *ngIf="userregister">
+            
+                <mat-card-content>
+            
+                    <form #registerForm="ngForm" (ngSubmit)="onSubmit()">
+            
+                        <mat-form-field>
+            
+                            <input matInput placeholder="Email" [(ngModel)]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" #userEmail required>
+            
+                            <mat-error>
+                                Ingrese un e-mail válido (abc@lmn.yz)
+                            </mat-error>
+            
+                        </mat-form-field>
+            
+                        <mat-form-field>
+            
+                            <input matInput placeholder="Contraseña" [(ngModel)]="password" minlength="6" [type]="hide ? 'password' : 'text'" name="password" #userPwd required>
+            
+                            <mat-error>
+                                Longitud mínima 6 caracteres
+                            </mat-error>
+            
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+            
+                        </mat-form-field>
+            
+                        <div class="container-login-form-btn">
+            
+                            <div class="wrap-login-form-btn">
+            
+                                <div class="login-form-bgbtn"></div>
+            
+                                <button mat-raised-button [disabled]="!registerForm.form.valid" class="login-form-btn">Dar de alta</button>
+            
+                            </div>
+            
+                        </div>
+            
+                    </form>
+            
+                    <div class="register">¿Ya tienes una cuenta? <a (click)="user_login()">Iniciar Sesión</a></div>
+            
+                </mat-card-content>
+            
+            </mat-card>
+            
+        </div>
+
+    </div>
+
+</div>

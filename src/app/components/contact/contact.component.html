@@ -1,0 +1,57 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <div class="center-content">
+
+        <div class="form-element">
+
+            <div class="wrap-contact2">
+
+                <form #contanctoForm="ngForm" (ngSubmit)="onSubmit(contanctoForm)" >
+        
+                    <span class="contact2-form-title">
+                        Contacta con <br><br> nosotros
+                    </span>
+        
+                    <mat-form-field>
+                        <input matInput placeholder="Nombre" [(ngModel)]="name" name="name" required>
+                        <mat-error>
+                            Campo obligatorio
+                        </mat-error>
+                    </mat-form-field>
+        
+                    <mat-form-field>
+                        <input matInput placeholder="Email" [(ngModel)]="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="email" required>
+                        <mat-error>
+                            Ingrese un e-mail válido (abc@lmn.yz)
+                        </mat-error>
+                    </mat-form-field>
+        
+                    <mat-form-field>
+                        <textarea matInput placeholder="Mensaje" [(ngModel)]="message" name="message" required></textarea>
+                        <mat-error>
+                            Campo obligatorio
+                        </mat-error>
+                    </mat-form-field>
+        
+                    <div class="container-contact2-form-btn">
+        
+                        <button mat-raised-button class="contact2-form-btn" type="submit" [disabled]="!contanctoForm.form.valid">
+                            <span class="text">Enviar</span>
+                            <i class="fa-solid fa-check"></i>
+                        </button>
+        
+                    </div>
+        
+                </form>
+        
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<app-footer></app-footer>

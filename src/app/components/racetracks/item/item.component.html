@@ -1,0 +1,26 @@
+<mat-card>
+
+    <div>
+        <img class="flag" src="{{racetrack?.flag}}">
+        <mat-card-header>
+            <mat-card-title>{{racetrack?.raceTrackID}} - {{racetrack?.GPName}}</mat-card-title>
+            <mat-card-subtitle>{{racetrack?.name}}<br>{{racetrack?.country}}</mat-card-subtitle>
+        </mat-card-header>
+    </div>
+
+    <mat-card-content>
+        <img src="{{racetrack?.mapURL}}">
+    </mat-card-content>
+
+    <mat-divider inset></mat-divider>
+
+    <mat-card-actions>
+        <a href="https://www.google.es/maps/place/{{racetrack?.coordinates}}" target="_blank">
+            <button mat-button><i class="fa-solid fa-map"></i></button>
+        </a>
+        <a href="./#/racetrack/{{racetrack?.raceTrackID}}">
+            <button mat-button><i class="fa-solid fa-circle-info"></i></button>
+        </a>
+    </mat-card-actions>
+
+</mat-card>

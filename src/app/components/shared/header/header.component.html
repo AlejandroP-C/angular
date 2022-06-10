@@ -1,0 +1,39 @@
+<mat-toolbar class="header">
+
+    <mat-toolbar-row>
+
+        <div class="display-1">
+
+            <a href="https://www.ieslluissimarro.org/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/logo_simarro.png" class="rounded logo_simarro">
+            </a>
+
+        </div>
+
+        <mat-button-toggle-group class="header__menu">
+
+            <button mat-raised-button class="header__menu__content" [routerLink]="['/home']" [routerLinkActive]="['active']">Home</button>
+            <button mat-raised-button class="header__menu__content" [routerLink]="['/contact']" [routerLinkActive]="['active']">Contact Us</button>
+
+        </mat-button-toggle-group>
+
+        <div class="display-1">
+
+            <a style="cursor: pointer;" [matMenuTriggerFor]="menu">
+                <img class="user_img" src="./assets/images/default_user.png">
+            </a>
+
+            <mat-menu #menu="matMenu">
+
+                <a class="logout" mat-menu-item (click)="loginService.logout()">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <span>Logout</span>
+                </a>
+
+            </mat-menu>
+
+        </div>
+
+    </mat-toolbar-row>
+
+</mat-toolbar>

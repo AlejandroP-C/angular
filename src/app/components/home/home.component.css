@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;    
+    margin: 5rem;
+    margin-top: 1% !important;
+}
+
+app-item {
+    flex: 1 1;
+    min-width: 481px;
+    min-height: 319px;
+    margin: 50px;
+}
